@@ -1,0 +1,15 @@
+<div class="container mt-5 text-center">
+  <h1>Edit your flat 🏠</h1>
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for @flat do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :number_of_guests %>
+      <%= f.input :price_per_night %>
+      <%= f.button :submit, "Update", class: "btn btn-primary w-100 mt-2" %>
+    </div>
+  </div>
+  <% end %>
+</div>

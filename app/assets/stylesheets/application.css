@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+.card-show {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+#logo {
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.banner img {
+  height: 100%;
+}
+
+.top-card-description {
+  height: 150px;
+}
+
+.banner {
+  height: 500px;
+  width: 100vw;
+}
+
+.banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#container-show {
+  margin-top: -50px;
+}
