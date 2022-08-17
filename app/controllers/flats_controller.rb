@@ -36,9 +36,14 @@ class FlatsController < ApplicationController
     redirect_to flat_path(@flat)
   end
 
+  def search
+    @query = params[:search]
+    @flats = Flat.where("flats.name LIKE '%#{@query}%'")
+  end
+
   private
 
   def flat_params
-    params.require(:flat).permit(:name, :description, :address, :number_of_guests, :price_per_night)
+    params.require(:flat).permit(:name, :description, :address, :number_of_guests, :price_per_night, :image)
   end
 end

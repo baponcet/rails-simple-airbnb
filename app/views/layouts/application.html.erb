@@ -15,8 +15,14 @@
   <body>
     <nav class="navbar navbar-expand bg-light">
       <div class="container-fluid">
-        <%= link_to 'Simple Airbnb', flats_path, class: 'navbar-brand', id: "logo" %>
-        <%= link_to 'Add a flat', new_flat_path, class: 'btn btn-secondary' %>
+        <div>
+          <%= link_to 'Simple Airbnb', flats_path, class: 'navbar-brand', id: "logo" %>
+        </div>
+          <%= form_tag(search_path, method: :get) do %>
+            <%= text_field_tag(:search, params[:search]) %>
+            <%= submit_tag ("Search") %>
+          <% end %>
+          <%= link_to 'Add a flat', new_flat_path, class: 'btn btn-secondary' %>
       </div>
     </nav>
     <%= yield %>

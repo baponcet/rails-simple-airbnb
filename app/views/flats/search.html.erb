@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h1><%= @query %></h1>
+  <div class="row mt-5">
+    <% @flats.each do |flat| %>
+    <div class="col-4 mb-3">
+      <div class="card">
+
+        <img src='<%= flat.image %>' class="card-img-top" alt="...">
+        <div class="card-body top-card-description">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.description %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="fa-solid fa-money-bill"></i> €<%= flat.price_per_night %> per night</li>
+          <li class="list-group-item"><i class="fa-solid fa-location-pin"></i> <%= flat.address %></li>
+          <li class="list-group-item"><i class="fa-solid fa-person"></i> <%= flat.number_of_guests %> people</li>
+        </ul>
+        <div class="card-body">
+          <%= link_to 'More info', flat_path(flat), class: "btn btn-outline-secondary" %>
+          <%= link_to 'Edit', edit_flat_path(flat), class: "btn btn-outline-secondary" %>
+          <%= link_to 'Delete', flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+          class: "btn btn-outline-secondary" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -53,3 +53,9 @@
 #container-show {
   margin-top: -50px;
 }
+
+#search {
+  border-radius: 5px;
+  width: 500px;
+  height: 100%;
+}
